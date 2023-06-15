@@ -35,3 +35,29 @@
 .inputRow{
     display: flex;
 }
+
+#padControl{
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.erase{
+    width: 100%;
+    text-align: center;
+}
+
+.restart{
+    width: 100%;
+    text-align: center;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+}
