@@ -43,9 +43,19 @@ enter.addEventListener('click', function(){
     });
   }
 
+  var erase = document.createElement('button');
+  erase.classList.add('erase');
+  erase.textContent = 'Erase';
+  document.body.appendChild(erase);
+  erase.addEventListener('click', function (){
+    for (var i = 0; i < row.length; i++){
+        row[i].style.backgroundColor = 'white';
+    }
+  })
+
   var restart = document.createElement('button');
   restart.classList.add('restart');
-  restart.textContent = 'restart';
+  restart.textContent = 'Restart';
   document.body.appendChild(restart);
   restart.addEventListener('click', function(){
         var container = document.getElementById('container');
