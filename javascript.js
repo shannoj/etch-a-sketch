@@ -33,8 +33,9 @@ enter.addEventListener('click', function(){
   userColumn.style.display = 'none';
   userRow.style.display = 'none';
   go.style.display = 'none';
-  
+
   var row = document.getElementsByClassName('row');
+  var column = document.getElementsByClassName('column');
 
   for (var i = 0; i < row.length; i++) {
     row[i].addEventListener('mouseover', function(e){
@@ -47,10 +48,18 @@ enter.addEventListener('click', function(){
   restart.textContent = 'restart';
   document.body.appendChild(restart);
   restart.addEventListener('click', function(){
-    for (var i = 0; i < row.length; i++) {
-        document.remove(row[i]);
-      }
+        var container = document.getElementById('container');
+        container.remove();
+        for (var i = 0; i < row.length; i++) {
+            row[i].remove();
+        }
+        for (var i = 0; i < column.length; i++) {
+            column[i].remove();
+        }
+        restart.style.display = 'none';
+        userColumn.style.display = '';
+        userRow.style.display = '';
+        go.style.display = '';
    });
-
 
 })
